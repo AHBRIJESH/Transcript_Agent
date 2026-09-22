@@ -1,0 +1,11 @@
+fastapi
+model2vec
+pydantic
+langchain-core
+langchain-openai
+langgraph
+requests
+dotenv
+meilisearch
+streamlit
+websocket

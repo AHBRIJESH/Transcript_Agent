@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "interviewer_timestamp": "00:00",
+        "interviewer_question": "Thanks for joining. To begin, how would you describe robotic surgery adoption in France today?",
+        "responder": "Dr. Martin",
+        "responder_answer": "Adoption is growing, but it is still concentrated in larger academic hospitals and private centres with stronger capital budgets. Smaller regional hospitals are much slower.",
+        "responder_timestamp": "00:18"
+    },
+    {
+        "id": 2,
+        "interviewer_timestamp": "01:12",
+        "interviewer_question": "What is holding adoption back?",
+        "responder": "Dr. Martin",
+        "responder_answer": "The biggest issue is still capital budget approval. Hospitals may like the technology clinically, but purchasing committees need a strong economic case before approving a system.",
+        "responder_timestamp": "01:20"
+    },
+    {
+        "id": 3,
+        "interviewer_timestamp": "02:14",
+        "interviewer_question": "So ROI is important?",
+        "responder": "Dr. Martin",
+        "responder_answer": "Very important. The clinical argument may get surgeons interested, but the finance team wants to understand utilisation, procedure volume, maintenance cost and whether the system will actually pay for itself.",
+        "responder_timestamp": "02:18"
+    },
+    {
+        "id": 4,
+        "interviewer_timestamp": "03:05",
+        "interviewer_question": "What about training?",
+        "responder": "Dr. Martin",
+        "responder_answer": "Training matters, especially in the first year. If only one surgeon can use the system, the economics become difficult. Hospitals want several surgeons trained so utilisation is high enough.",
+        "responder_timestamp": "03:10"
+    },
+    {
+        "id": 5,
+        "interviewer_timestamp": "04:02",
+        "interviewer_question": "Are clinical outcomes still the main driver?",
+        "responder": "Dr. Martin",
+        "responder_answer": "Clinical outcomes are necessary, but they are not enough on their own. If two systems offer similar outcomes, the hospital will look hard at economics and utilisation.",
+        "responder_timestamp": "04:08"
+    },
+    {
+        "id": 6,
+        "interviewer_timestamp": "05:00",
+        "interviewer_question": "What do you expect over the next three to five years?",
+        "responder": "Dr. Martin",
+        "responder_answer": "I expect adoption to continue increasing, probably steadily rather than explosively. I would expect maybe 15 to 20 percent more procedures annually in some of the stronger centres, but smaller hospitals will remain slower.",
+        "responder_timestamp": "05:07"
+    },
+    {
+        "id": 7,
+        "interviewer_timestamp": "06:02",
+        "interviewer_question": "How long does a purchase decision normally take?",
+        "responder": "Dr. Martin",
+        "responder_answer": "Six to twelve months is realistic once the hospital becomes serious. It can be longer if the capital committee pushes the purchase into the next budget cycle.",
+        "responder_timestamp": "06:08"
+    },
+    {
+        "id": 8,
+        "interviewer_timestamp": "00:00",
+        "interviewer_question": "How would you describe robotic surgery adoption in Germany today?",
+        "responder": "Anna Keller",
+        "responder_answer": "It is growing, but adoption is quite uneven. Large university hospitals are much more advanced, while many smaller hospitals are still waiting.",
+        "responder_timestamp": "00:16"
+    },
+    {
+        "id": 9,
+        "interviewer_timestamp": "01:05",
+        "interviewer_question": "What are the main barriers?",
+        "responder": "Anna Keller",
+        "responder_answer": "Cost is the first barrier. These are large capital purchases, and hospital finances are under pressure. The second issue is proving that the system will be used enough.",
+        "responder_timestamp": "01:10"
+    },
+    {
+        "id": 10,
+        "interviewer_timestamp": "02:03",
+        "interviewer_question": "What does procurement focus on?",
+        "responder": "Anna Keller",
+        "responder_answer": "We look at total cost of ownership, expected procedure volume, maintenance, service contracts and training requirements. A strong clinical case helps, but the economic case decides whether it gets approved.",
+        "responder_timestamp": "02:08"
+    },
+    {
+        "id": 11,
+        "interviewer_timestamp": "03:00",
+        "interviewer_question": "How important is surgeon training?",
+        "responder": "Anna Keller",
+        "responder_answer": "Very important operationally. If the hospital buys a system but only one surgeon is comfortable using it, utilisation will be poor. That weakens the business case.",
+        "responder_timestamp": "03:05"
+    },
+    {
+        "id": 12,
+        "interviewer_timestamp": "04:04",
+        "interviewer_question": "Do you expect adoption to accelerate?",
+        "responder": "Anna Keller",
+        "responder_answer": "Yes, but I would not expect a dramatic jump. I think growth will be gradual, especially because many hospitals have other competing capital priorities.",
+        "responder_timestamp": "04:09"
+    },
+    {
+        "id": 13,
+        "interviewer_timestamp": "05:02",
+        "interviewer_question": "Any rough expectation over the next three to five years?",
+        "responder": "Anna Keller",
+        "responder_answer": "I would expect continued growth, but probably closer to high single digits or low double digits in procedure volumes rather than something like 20 percent across the whole market.",
+        "responder_timestamp": "05:08"
+    },
+    {
+        "id": 14,
+        "interviewer_timestamp": "06:00",
+        "interviewer_question": "How long can the purchase process take?",
+        "responder": "Anna Keller",
+        "responder_answer": "Nine to eighteen months is common. Procurement, clinical leadership, finance and management all need to align, so it can move slowly.",
+        "responder_timestamp": "06:05"
+    },
+    {
+        "id": 15,
+        "interviewer_timestamp": "00:00",
+        "interviewer_question": "How would you describe adoption in the UK?",
+        "responder": "Dr. Carter",
+        "responder_answer": "Adoption is increasing, and in some larger NHS trusts robotic surgery is becoming standard for selected procedures. But access still varies significantly by hospital.",
+        "responder_timestamp": "00:14"
+    },
+    {
+        "id": 16,
+        "interviewer_timestamp": "01:00",
+        "interviewer_question": "What are the main barriers?",
+        "responder": "Dr. Carter",
+        "responder_answer": "Funding is important, but I would say training capacity is just as important. You can buy a system, but if you cannot train enough surgeons and theatre staff, adoption stalls.",
+        "responder_timestamp": "01:05"
+    },
+    {
+        "id": 17,
+        "interviewer_timestamp": "02:02",
+        "interviewer_question": "How important is ROI?",
+        "responder": "Dr. Carter",
+        "responder_answer": "It matters, but the discussion is not always purely financial. Hospitals also consider patient outcomes, length of stay, surgeon recruitment and whether the technology improves their clinical position.",
+        "responder_timestamp": "02:07"
+    },
+    {
+        "id": 18,
+        "interviewer_timestamp": "03:03",
+        "interviewer_question": "So would you say economics are less important in the UK?",
+        "responder": "Dr. Carter",
+        "responder_answer": "I would say economics and clinical strategy are balanced. I would not say finance alone decides the purchase.",
+        "responder_timestamp": "03:10"
+    },
+    {
+        "id": 19,
+        "interviewer_timestamp": "04:01",
+        "interviewer_question": "What is your outlook for the next three to five years?",
+        "responder": "Dr. Carter",
+        "responder_answer": "I am quite positive. I think adoption could accelerate if training expands and systems become more cost competitive. I could see procedure growth above 15 percent annually in some areas.",
+        "responder_timestamp": "04:06"
+    },
+    {
+        "id": 20,
+        "interviewer_timestamp": "05:00",
+        "interviewer_question": "What about purchase timelines?",
+        "responder": "Dr. Carter",
+        "responder_answer": "Around six to nine months can happen if funding is already available. If the trust has to wait for a new capital cycle, it can take much longer.",
+        "responder_timestamp": "05:04"
+    },
+    {
+        "id": 21,
+        "interviewer_timestamp": "06:00",
+        "interviewer_question": "Any final thought?",
+        "responder": "Dr. Carter",
+        "responder_answer": "The key point is that adoption is not just about buying the machine. Hospitals need enough trained people and enough procedure volume to make the programme sustainable.",
+        "responder_timestamp": "06:04"
+    }
+]

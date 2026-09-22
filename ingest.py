@@ -1,53 +1,82 @@
+
 import json
-import os
-import requests
 import meilisearch
 
 MEILI_URL = "http://127.0.0.1:7700"
-INDEX_NAME = "Industry_Data"
 
-client = meilisearch.Client(MEILI_URL,"password")
-index = client.index(INDEX_NAME)
+MEILI_API_KEY = "password"
 
-print("Configuring embedder...")
+INDEX_NAME = "Transcript_Agent"
 
-task = index.update_settings({
-    "embedders": {
-        "hf-inference": {
-            "source": "rest",
-            "url":  "http://host.docker.internal:7870/embed",
-            "dimensions": 256,
-            "documentTemplate": "{{doc.title}}\n{{doc.text}}",
-            "request": {
-                "inputs": [
-                    "{{text}}",
-                    "{{..}}"
-                ]
-            },
-            "response": {
-                "embedding": [
-                    "{{embedding}}",
-                    "{{..}}"
-                ]
-            }
-        }
-    }
-})
+JSON_FILE = "transcripts.json"
 
-print("Embedder configured.")
-
-with open("website_data_clean.json", "r") as f:
-    docs = json.load(f)
-
-print(f"Ingesting {len(docs)} documents...")
-
-task = index.add_documents(docs)
-
-result = client.wait_for_task(
-    task.task_uid,
-    timeout_in_ms=120000,
-    interval_in_ms=500
+client = meilisearch.Client(
+    MEILI_URL,
+    MEILI_API_KEY
 )
 
-print(result)
-print("Documents indexed successfully.")
+index = client.index(INDEX_NAME)
+
+def configure_meilisearch():
+    print("Configuring embedder...")
+    task = index.update_settings({
+         "embedders": {
+            "hf-inference": {
+                "source": "rest",
+                "url": ("http://host.docker.internal:7870/embed"),
+                "dimensions": 256,
+                "documentTemplate": (
+    "Interviewer Timestamp: {{doc.interviewer_timestamp}}\n"
+    "Interviewer Question: {{doc.interviewer_question}}\n"
+    "Responder: {{doc.responder}}\n"
+    "Responder Timestamp: {{doc.responder_timestamp}}\n"
+    "Responder Answer: {{doc.responder_answer}}"
+),
+                "request": {
+                    "inputs": [
+                        "{{text}}",
+                        "{{..}}"
+                    ]
+                },
+                "response": {
+                    "embedding": [
+                        "{{embedding}}",
+                        "{{..}}"
+                    ]
+                }
+            }
+        }
+    })
+
+    result = client.wait_for_task(
+        task.task_uid,
+        timeout_in_ms=120000,
+        interval_in_ms=500
+    )
+    print(result)
+
+
+def load_documents(json_file):
+    with open(json_file, "r", encoding="utf-8") as file:
+        docs = json.load(file)
+    print(f"Loaded {len(docs)} documents.")
+    return docs
+
+def ingest_documents(docs):
+    print(f"Ingesting {len(docs)} documents...")
+    task = index.add_documents(docs)
+    result = client.wait_for_task(
+        task.task_uid,
+        timeout_in_ms=120000,
+        interval_in_ms=500
+    )
+    print(result)
+
+if __name__ == "__main__":
+    configure_meilisearch()
+    documents = load_documents(
+        JSON_FILE
+    )
+    ingest_documents(
+        documents
+    )
