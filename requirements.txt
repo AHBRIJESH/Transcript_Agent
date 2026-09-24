@@ -5,7 +5,7 @@ langchain-core
 langchain-openai
 langgraph
 requests
-dotenv
+python-dotenv
 meilisearch
 streamlit
-websocket
+websocket-client

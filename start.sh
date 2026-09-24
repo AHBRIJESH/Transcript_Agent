@@ -9,7 +9,6 @@ echo ""
 echo "Starting embedding server..."
 
 python embeder.py &
-
 EMBED_PID=$!
 
 echo "Embedding PID: $EMBED_PID"
@@ -51,7 +50,6 @@ done
 
 echo "Meilisearch is ready."
 
-
 echo ""
 echo "=========================================="
 echo " Formatting data"
@@ -78,7 +76,6 @@ echo " Starting Retriever"
 echo "=========================================="
 
 python retriver.py &
-
 RETRIEVER_PID=$!
 
 echo "Retriever PID: $RETRIEVER_PID"
@@ -91,24 +88,40 @@ done
 echo "Retriever is ready."
 
 echo ""
-echo "Starting App..."
+echo "=========================================="
+echo " Starting App"
+echo "=========================================="
 
 python app.py &
-
 APP_PID=$!
 
+echo "App PID: $APP_PID"
+echo "Waiting for App on port 8000..."
+
+while true; do
+    APP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+        http://127.0.0.1:8000/health || true)
+
+    if [ "$APP_STATUS" != "000" ]; then
+        echo "App is responding with HTTP $APP_STATUS"
+        break
+    fi
+
+    sleep 1
+done
+
+echo "App is ready."
+
 echo ""
-echo "Starting Streamlit..."
+echo "=========================================="
+echo " Starting Streamlit"
+echo "=========================================="
 
 streamlit run streamlit_app.py \
     --server.address 0.0.0.0 \
     --server.port 8501 &
 
 STREAMLIT_PID=$!
-
-trap '
-kill $EMBED_PID $MEILI_PID $RETRIEVER_PID $APP_PID $STREAMLIT_PID 2>/dev/null || true
-' EXIT
 
 echo ""
 echo "=========================================="
@@ -121,5 +134,9 @@ echo "Retriever  : 8001"
 echo "App        : 8000"
 echo "Streamlit  : 8501"
 echo ""
+
+trap '
+kill $EMBED_PID $MEILI_PID $RETRIEVER_PID $APP_PID $STREAMLIT_PID 2>/dev/null || true
+' EXIT
 
 wait
